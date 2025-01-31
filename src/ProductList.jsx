@@ -302,7 +302,8 @@ const handleRemoveFromCart = plant => dispatch(removeItem(plant));
                                 <div className='product-cost'>{plant.cost}</div>
                                 <button className={addedToCart[plant.name] ? 'product-button added-to-cart' : 'product-button'}
                                     disabled={addedToCart[plant.name] ? true : false}
-                                    onClick={() => addedToCart[plant.name] ? handleRemoveFromCart(plant) : handleAddToCart(plant)}>
+                                    onClick={() => addedToCart[plant.name] ? handleRemoveFromCart(plant) : handleAddToCart(plant)}
+                                    >
                                         Add to Cart
                                 </button>
                             </div>
