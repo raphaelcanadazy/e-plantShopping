@@ -298,6 +298,8 @@ const handleRemoveFromCart = plant => dispatch(removeItem(plant));
                             <div className='product-card' key={plantsIndex}>
                                 <img className='product-image' src={plant.image} alt={plant.name} />
                                 <div className='product-title'>{plant.name}</div>
+                                <div className='product-description'>{plant.description}</div>
+                                <div className='product-cost'>{plant.cost}</div>
                                 <button className={addedToCart[plant.name] ? 'product-button added-to-cart' : 'product-button'}
                                     disabled={addedToCart[plant.name] ? true : false}
                                     onClick={() => addedToCart[plant.name] ? handleRemoveFromCart(plant) : handleAddToCart(plant)}>
